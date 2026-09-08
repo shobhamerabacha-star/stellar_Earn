@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
-    "dev": "next dev",
+    "dev": "node init && next dev",
     "prebuild": "node -e \"require('fs').rmSync('.next', { recursive: true, force: true })\"",
-    "build": "next build",
-    "start": "next start",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint . --cache --cache-location .next/cache/eslint/",
     "typecheck": "tsc --noEmit",
     "validate:path-aliases": "node scripts/validate-path-aliases.js",

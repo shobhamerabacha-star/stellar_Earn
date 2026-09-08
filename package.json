@@ -5,7 +5,7 @@
   "scripts": {
     "test": "node tests/run-tests.js",
     "lint": "npm --prefix FrontEnd/my-app run lint",
-    "build": "npm --prefix FrontEnd/my-app run build",
+    "build": "node init && npm --prefix FrontEnd/my-app run build",
     "audit:frontend": "npm --prefix FrontEnd/my-app audit --audit-level=moderate || true",
     "depcheck:frontend": "cd FrontEnd/my-app && npx depcheck --json > ../../frontend-depcheck-report.json || echo \"Unused dependencies found\"",
     "lint-staged": "lint-staged",
